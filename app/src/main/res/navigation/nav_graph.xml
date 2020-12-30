@@ -10,7 +10,7 @@
         android:id="@+id/splashScreen"
         android:name="com.jenzhouu.skypalette.SplashScreen.SplashSreenFragment"
         android:label="fragment_splash_page"
-        android:layout="@layout/fragment_splash_page" >
+        android:layout="@layout/fragment_splash_screen" >
         <action
             android:id="@+id/action_splash_fragment_to_home_fragment"
             app:destination="@id/homePage" />
