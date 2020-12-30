@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.jenzhouu.skypalette.SplashScreen.SplashSreenFragment"
+        android:label="fragment_splash_page"
+        android:layout="@layout/fragment_splash_page" >
+        <action
+            android:id="@+id/action_splash_fragment_to_home_fragment"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.jenzhouu.skypalette.HomePage.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+<!--        <action-->
+<!--            android:id="@+id/action_weatherListFragment_to_weatherDetailsFragment"-->
+<!--            app:destination="@id/weatherDetailsFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_weatherListFragment_to_errorFragment"-->
+<!--            app:destination="@id/errorFragment" />-->
+    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/weatherDetailsFragment"-->
+<!--        android:name="com.jenzhouu.skypalette.weatherdetail.WeatherDetailsFragment"-->
+<!--        android:label="fragment_weather_details"-->
+<!--        tools:layout="@layout/fragment_weather_details" >-->
+<!--        <action-->
+<!--            android:id="@+id/action_weatherDetailsFragment_to_weatherListFragment"-->
+<!--            app:destination="@id/weatherListFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_weatherDetailsFragment_to_errorFragment"-->
+<!--            app:destination="@id/errorFragment" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/errorFragment"-->
+<!--        android:name="com.jenzhouu.skypalette.error.ErrorFragment"-->
+<!--        android:label="fragment_error_page"-->
+<!--        tools:layout="@layout/fragment_error_page" />-->
+</navigation>
