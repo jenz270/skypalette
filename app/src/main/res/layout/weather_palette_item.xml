@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_weather_palette"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/card_elevation"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_palette_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="@dimen/margin_extra_small">
+
+            <TextView
+                android:id="@+id/weekday_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_extra_small"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:fontFamily="@font/work_sans"
+                tools:text="Weekday"
+                android:textColor="@android:color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/weather_icon"
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin_extra_small"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:background="#00683030"
+                android:src="@drawable/ic_cloudy"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weekday_text" />
+
+            <ImageView
+                android:id="@+id/ic_color_one"
+                android:layout_width="@dimen/margin_medium"
+                android:layout_height="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_extra_large"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/weather_icon"
+                app:layout_constraintRight_toLeftOf="@+id/ic_color_two"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ic_color_two"
+                android:layout_width="@dimen/margin_medium"
+                android:layout_height="@dimen/margin_medium"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ic_color_one"
+                app:layout_constraintRight_toLeftOf="@+id/ic_color_three"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ic_color_three"
+                android:layout_width="@dimen/margin_medium"
+                android:layout_height="@dimen/margin_medium"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/ic_color_two"
+                app:layout_constraintRight_toLeftOf="@+id/ic_color_four"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ic_color_four"
+                android:layout_width="@dimen/margin_medium"
+                android:layout_height="@dimen/margin_medium"
+                android:src="@drawable/ic_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ic_color_three"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
