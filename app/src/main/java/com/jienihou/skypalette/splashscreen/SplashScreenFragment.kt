@@ -16,7 +16,7 @@ class SplashScreenFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = DataBindingUtil.inflate<FragmentSplashScreenBinding>(
             inflater, R.layout.fragment_splash_screen, container, false
         )
@@ -27,6 +27,7 @@ class SplashScreenFragment : Fragment() {
         binding.appStart.setOnClickListener {
             findNavController().navigate(R.id.action_splash_fragment_to_home_fragment)
         }
+
         return binding.root
     }
 }

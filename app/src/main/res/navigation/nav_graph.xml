@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/splashScreen"
-        android:name="com.jenzhouu.skypalette.SplashScreen.SplashSreenFragment"
+        android:name="com.jienihou.skypalette.splashscreen.SplashScreenFragment"
         android:label="fragment_splash_page"
         android:layout="@layout/fragment_splash_screen" >
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/homePage"
-        android:name="com.jenzhouu.skypalette.HomePage.HomePageFragment"
+        android:name="com.jienihou.skypalette.homepage.HomePageFragment"
         android:label="fragment_home_page"
         tools:layout="@layout/fragment_home_page" >
 <!--        <action-->

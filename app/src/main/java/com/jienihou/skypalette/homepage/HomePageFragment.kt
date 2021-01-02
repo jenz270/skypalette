@@ -16,14 +16,14 @@ import com.jienihou.skypalette.util.TopSpacingItemDecoration
 private const val TAG = "HomePageFragment"
 
 class HomePageFragment : Fragment() {
-    //private val homePageAdapter =  HomePageAdapter()
+    private val homePageAdapter =  HomePageAdapter()
     private lateinit var spinner : ProgressBar
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding = DataBindingUtil.inflate<FragmentHomePageBinding>(
             inflater, R.layout.fragment_home_page, container, false
         )
@@ -36,7 +36,7 @@ class HomePageFragment : Fragment() {
         binding.rvHomePage.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context)
-            //adapter = homePageAdapter
+            adapter = homePageAdapter
             val spacingDecoration = TopSpacingItemDecoration(resources.getInteger(R.integer.list_item_padding))
             addItemDecoration(spacingDecoration)
         }
