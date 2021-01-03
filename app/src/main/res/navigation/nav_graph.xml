@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/splashScreen">
-
     <fragment
         android:id="@+id/splashScreen"
         android:name="com.jienihou.skypalette.splashscreen.SplashScreenFragment"
@@ -20,25 +19,25 @@
         android:name="com.jienihou.skypalette.homepage.HomePageFragment"
         android:label="fragment_home_page"
         tools:layout="@layout/fragment_home_page" >
-<!--        <action-->
-<!--            android:id="@+id/action_weatherListFragment_to_weatherDetailsFragment"-->
-<!--            app:destination="@id/weatherDetailsFragment" />-->
+        <action
+            android:id="@+id/action_weatherListFragment_to_weatherDetailsFragment"
+            app:destination="@id/weatherDetailsFragment" />
 <!--        <action-->
 <!--            android:id="@+id/action_weatherListFragment_to_errorFragment"-->
 <!--            app:destination="@id/errorFragment" />-->
     </fragment>
-<!--    <fragment-->
-<!--        android:id="@+id/weatherDetailsFragment"-->
-<!--        android:name="com.jenzhouu.skypalette.weatherdetail.WeatherDetailsFragment"-->
-<!--        android:label="fragment_weather_details"-->
-<!--        tools:layout="@layout/fragment_weather_details" >-->
-<!--        <action-->
-<!--            android:id="@+id/action_weatherDetailsFragment_to_weatherListFragment"-->
-<!--            app:destination="@id/weatherListFragment" />-->
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.jienihou.skypalette.weatherdetailspage.WeatherDetailsFragment"
+        android:label="fragment_weather_details_page"
+        tools:layout="@layout/fragment_weather_details_page" >
+        <action
+            android:id="@+id/action_weatherDetailsFragment_to_weatherListFragment"
+            app:destination="@id/homePage" />
 <!--        <action-->
 <!--            android:id="@+id/action_weatherDetailsFragment_to_errorFragment"-->
 <!--            app:destination="@id/errorFragment" />-->
-<!--    </fragment>-->
+    </fragment>
 <!--    <fragment-->
 <!--        android:id="@+id/errorFragment"-->
 <!--        android:name="com.jenzhouu.skypalette.error.ErrorFragment"-->
