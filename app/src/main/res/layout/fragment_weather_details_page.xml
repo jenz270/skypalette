@@ -136,6 +136,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
+<!-- TODO: fix the positioning of the button on screen. -->
         <Button
             android:id="@+id/cv_weather_palette_shuffle"
             android:layout_width="match_parent"

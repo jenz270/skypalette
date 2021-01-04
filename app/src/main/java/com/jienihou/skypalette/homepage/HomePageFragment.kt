@@ -41,6 +41,7 @@ class HomePageFragment : Fragment() {
             addItemDecoration(spacingDecoration)
         }
 
+        // TODO: Add in viewmodel initialization & recyclerview details initialization here
         return binding.root
     }
 }

@@ -52,6 +52,7 @@ class WeatherDetailsFragment : Fragment() {
             binding.vFourthColor.setBackgroundColor(weatherPalette.colors[3].toInt())
         }
 
+        // TODO: insert viewmodel initialization and shuffle button implementation here
         return binding.root
     }
 }
