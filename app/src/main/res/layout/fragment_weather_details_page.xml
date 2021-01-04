@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_weather_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_weather_palette_detail_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:contentPadding="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_weather_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:id="@+id/tv_weekday_view"
+                    tools:text="WEDNESDAY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/work_sans"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_high_temp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_weather_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_cloudy"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_low_temp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_low_temp" />
+
+                <TextView
+                    android:id="@+id/tv_high_temp_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/work_sans"
+                    tools:text="HIGH"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_high_temp"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_weekday_view"
+                    app:layout_constraintRight_toLeftOf="@+id/tv_high_temp"
+                    app:layout_constraintTop_toTopOf="@+id/tv_high_temp"
+                    android:layout_marginStart="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_low_temp_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/work_sans"
+                    tools:text="LOW"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_low_temp"
+                    app:layout_constraintLeft_toLeftOf="@+id/tv_high_temp_label"
+                    app:layout_constraintTop_toTopOf="@+id/tv_low_temp" />
+
+                <TextView
+                    android:id="@+id/tv_high_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/work_sans"
+                    tools:text="21°C"
+                    android:textColor="@android:color/black"
+                    android:textSize="40sp"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_high_temp_label"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_low_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/work_sans"
+                    tools:text="19°C"
+                    android:textColor="@android:color/black"
+                    android:textSize="35sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_low_temp_label"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_low_temp_label"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_high_temp" />
+
+                <View
+                    android:id="@+id/v_first_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="50dp"
+                    android:background="#FF6FE4E4"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_low_temp_label" />
+
+                <View
+                    android:id="@+id/v_second_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="#FF73C3E6"
+                    app:layout_constraintTop_toBottomOf="@+id/v_first_color" />
+
+                <View
+                    android:id="@+id/v_third_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="#FF76A3E7"
+                    app:layout_constraintTop_toBottomOf="@id/v_second_color" />
+
+                <View
+                    android:id="@+id/v_fourth_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="#FF7A85E9"
+                    app:layout_constraintTop_toBottomOf="@+id/v_third_color" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+<!-- TODO: fix the positioning of the button on screen. -->
+        <Button
+            android:id="@+id/cv_weather_palette_shuffle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shuffle_button"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/cv_weather_palette_detail_card"
+            app:layout_constraintLeft_toLeftOf="@id/cv_weather_palette_detail_card"
+            app:layout_constraintRight_toRightOf="@id/cv_weather_palette_detail_card"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
